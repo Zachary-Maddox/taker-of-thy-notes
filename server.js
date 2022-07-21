@@ -1,5 +1,6 @@
 const express = require("express");
 const htmlRoutes = require("./routes/htmlRoutes");
+const apiRoutes = require("./routes/apiRoutes");
 
 // initialize express
 const app = express();
@@ -11,6 +12,7 @@ const PORT = process.env.PORT||3001;
 app.use(express.static('public'));
 
 // Routes
+app.use("/api",apiRoutes)
 app.use("/",htmlRoutes)
 
 // This allows the app to listen on a specific PORT
