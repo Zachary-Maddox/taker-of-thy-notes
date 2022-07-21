@@ -11,6 +11,9 @@ const PORT = process.env.PORT||3001;
 // serves the public folder to the browser. 
 app.use(express.static('public'));
 
+// parses json data
+app.use(express.json());
+
 // Routes
 app.use("/api",apiRoutes)
 app.use("/",htmlRoutes)

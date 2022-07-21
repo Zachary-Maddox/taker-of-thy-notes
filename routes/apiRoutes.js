@@ -1,5 +1,5 @@
 const db = require("../db/db.json")
-
+const fs = require("fs")
 // Pulls router() from the express package
 
 const router = require("express").Router();
@@ -11,6 +11,19 @@ const path = require("path");
 // /api/notes
 router.get("/notes", (req, res) => {
   res.json(db);
+});
+
+// POST route
+///api/notes
+router.post("/notes", (req, res) => {
+  // pushes new notes to db array
+  db.push(req.body)
+
+  // write modified db array to db.json
+  fs.writeFileSync(path.join(__dirname,"../db/db.json"), JSON.stringify(db));
+
+  // sends json back to front end
+res.json(db)
 });
 
 
