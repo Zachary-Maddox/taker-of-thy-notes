@@ -3,6 +3,9 @@
   ## Description
   Hello, This is a note taking application that allows you create and save notes to a Database. You Click on the new note title to create and once the new note is created you simply press the save icon to save the note. After you have multiple notes added you can always go back and review by clicking on that particular note in the left hand column. From there the note you selected will appear in the righthand column.
  <img src="./public/assets/images/Note-Taker.png">
+
+  deployed link: https://zachary-maddox.github.io/taker-of-thy-notes/
+  github link: https://github.com/Zachary-Maddox/taker-of-thy-notes
   
   ## Table of contents
   
